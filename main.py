@@ -1,16 +1,24 @@
 import statistics
+import numpy as np
 
-def std_deviation():
+def std_deviation(sarasas):
 
-    sarasas = [] 
-    n = int(input("Enter number of elements : ")) 
-  
-    for i in range(n): 
-        skaicius = int(input()) 
-        sarasas.append(skaicius) 
-      
     std_nuokrypis = statistics.stdev(sarasas)
 
     return std_nuokrypis
 
-print(std_deviation())
+def list_sum(sarasas):
+
+    vidurkis = np.mean(sarasas)
+
+    return vidurkis
+
+sarasas = [] 
+n = int(input("Enter number of elements : ")) 
+  
+for i in range(n): 
+    skaicius = int(input()) 
+    sarasas.append(skaicius) 
+
+print(std_deviation(sarasas))
+print(list_sum(sarasas))
